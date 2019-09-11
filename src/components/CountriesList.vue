@@ -1,5 +1,11 @@
 <template lang="html">
+<div>
+  <ul>
+    <list-component v-for="(country, index) in countries" :country="country"
+    :key="index"></list-component>
+  </ul>
 
+</div>
 </template>
 
 <script>

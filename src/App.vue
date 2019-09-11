@@ -1,13 +1,17 @@
 <template>
   <div id="app">
     <h1>Welcommen</h1>
+    <div>
+      <country-detail :country="selectedCountry"> </country-detail>
+      <countries-list :countries="countries"></countries-list>
+    </div>
   </div>
 </template>
 
 <script>
 import CountriesList from './components/CountriesList.vue'
 import CountryDetail from './components/CountryDetail.vue'
-import eventBus from './main'
+import {eventBus} from './main'
 
 export default {
   name: 'app',
@@ -24,8 +28,8 @@ export default {
 
     eventBus.$on('country-selected', (country) => {
       this.selectedCountry = country
-    })
 
+    })
 
   },
   components: {

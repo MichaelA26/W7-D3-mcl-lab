@@ -1,9 +1,9 @@
 <template lang="html">
-
+<li v-on:click="handleClick">{{country.name}}</li>
 </template>
 
 <script>
-import eventBus from '../main'
+import {eventBus} from '../main'
 
 export default {
   name: 'list-component',
