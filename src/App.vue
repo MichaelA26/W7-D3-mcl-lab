@@ -22,6 +22,11 @@ export default {
     .then(result => result.json())
     .then(countries => this.countries = countries)
 
+    eventBus.$on('country-selected', (country) => {
+      this.selectedCountry = country
+    })
+
+
   },
   components: {
     "countries-list": CountriesList,
