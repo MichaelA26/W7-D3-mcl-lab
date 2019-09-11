@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+ ul {
+   background-color: yellow;
+ }
 </style>

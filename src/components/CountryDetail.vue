@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
+main {
+  background-color: #66CCFF;
+}
 </style>
