@@ -2,8 +2,15 @@
   <div id="app">
     <h1>Welcommen</h1>
     <div class="super-container">
-      <country-detail :country="selectedCountry"> </country-detail>
-      <countries-list :countries="countries"></countries-list>
+
+      <label> Select a Country </label>
+      <select :country="selectedCountry">
+        <option v-for="country in countries">
+          {{ country.name }}
+        </option>
+        <!-- <countries-list :countries="countries"></countries-list> -->
+      </select>
+
     </div>
   </div>
 </template>
@@ -41,16 +48,16 @@ export default {
 
 <style>
 .super-container {
- display: inline;
- /* flex-direction: row-reverse; */
- justify-content: space-between;
+  display: inline;
+  /* flex-direction: row-reverse; */
+  justify-content: space-between;
 }
 /* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+font-family: 'Avenir', Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-align: center;
+color: #2c3e50;
+margin-top: 60px;
 } */
 </style>
